@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Nunito+Sans">
+    <title>Countries</title>
+  </head>
+  <body >
+      <header class="px-4 md:px-8 lg:px-16">
+        <div class="text-2xl font-medium " >Where in the world?</div>
+
+        <div class="flex justify-between items-center dark" id="dark">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+          </svg>
+          <p class="ml-1.5">Dark Mode</p>
+        </div>
+      </header>
+
+      <div class="main px-4 md:px-8 lg:px-16">
+
+        <div class="flex justify-between items-center pt-12 h-auto text-sm search_filter">
+
+          <div class="search-container">
+            <svg  class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+            <input type="text" placeholder="Search for a country..." class="search w-96 p-2 rounded">
+            <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+          </div>
+
+          <div class="filter_region dorpDownCon rounded" id="filter">
+            <div class="dropDown w-44 flex items-center justify-between px-3 py-2  search-container">
+              <p class="filter_country">Filter by Region</p>
+              <button><svg class="ml-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+              </svg></button>
+            </div>
+              
+            <div class="drop rounded hidden">
+              <p class="region">All</p>
+              <p class="region">Africa</p>
+              <p class="region">America</p>
+              <p class="region">Asia</p>
+              <p class="region">Europe</p>
+              <p class="region">Oceania</p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="countries "></div>
+
+        <p class="no-results"></p>
+
+
+        <!-- One Country -->
+
+        <div class="one-country hidden pt-8">
+
+        
+        <div class="back flex items-center border-2 w-28 rounded shadow-md pl-4 ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+          </svg>
+          <p class="ml-3">Back</p>
+        </div>
+
+        <div class="  mt-20 whole">
+
+          <div class="separately-img">
+            <img src="https://flagcdn.com/hu.svg">
+          </div>
+
+          <div class="separately-info ">
+
+            <div class=" filter_region whole">
+              <div>
+                <h5 class="font-bold text-2xl mb-12">Hungary</h5>
+                <p><strong>Native Name:</strong>  Magyarország</p>
+                <p><strong>Population:</strong>  9749763</p>
+                <p><strong>Region:</strong>  Europe</p>
+                <p><strong>Sub Region:</strong>  Central Europe</p>
+                <p><strong>Capital:</strong> Budapest</p>
+              </div>
+              <div class="ml-24 mt-16 ">
+                <p><strong>Top Level Domain:</strong>  .hu</p>
+                <p><strong>Currencies:</strong>  Hungarian forint</p>
+                <p><strong>Languages:</strong> Hungarian</p>
+              </div>
+            </div>
+
+
+            <div class="whole filter_region">
+              <p class="mt-8 w-40 font-bold text-base">Border Countries:</p>
+
+              <div class="flex flex-wrap">
+                <div class="borders border-2 w-24 rounded shadow-md pl-8 mt-8 ml-4">
+                  AUT
+                </div>
+              </div>
+              
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        
+
+      </div>
+
+
+
+
+      </div>
+
+
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

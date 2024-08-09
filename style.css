@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --primary-color:hsl(200, 15%, 8%); 
+    --secondary-color: hsl(0, 0%, 100%);
+    --third-color:hsl(0, 0%, 98%);
+}
+
+.dark-theme{
+    --primary-color:white; 
+    --secondary-color:hsl(209, 23%, 22%);
+    --third-color:hsl(207, 26%, 17%);
+}
+
+/* .search_filter {
+    display: none;
+}
+.countries{
+    display: none;
+}
+.country{
+    display: none;
+} */
+
+ header{
+    z-index: 999;
+    width: 100%;
+    background-color: var(--secondary-color);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    color:hsl(200, 15%, 8%);
+    border-bottom: solid var(--secondary-color);
+    color:var(--primary-color)
+ }
+
+ .dark{
+    color:var(--primary-color);
+ }
+ .dark:hover{
+    color: var(--third-color);
+ }
+
+ .main{
+    background-color: var(--third-color);
+    height: auto;
+    width: 100%;
+ }
+
+ .search-container {
+    position: relative;
+    
+  }
+
+  .search-container input {
+    padding-left: 2.5rem; 
+    background-color: var(--secondary-color);
+    color:var(--primary-color);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    margin-bottom: 4px;
+    border-radius: 5px;
+    
+  }
+
+  .search-container .search-icon {
+    position: absolute;
+    left: 0.5rem; 
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem; 
+    color: gray; 
+  }
+
+  .close-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: gray;
+    cursor: pointer;
+    display: none;
+  }
+
+  .filter_region{
+    color:var(--primary-color);
+    /* background-color: var(--secondary-color); */
+  }
+  .dropDownCon{
+    position: relative;
+    
+  }
+  .dropDown{
+    width: 100%;
+    width: 180px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    background-color: var(--secondary-color);
+  }
+
+  .drop{
+    position: absolute;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    width: 160px;
+    margin-top: 3px;
+    padding-left: 15px;
+  }
+  .drop p{
+    margin:8px;
+  }
+  .countries{
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  }
+  .country{
+    min-height: 370px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    width: 300px;
+    border-radius: 5px;
+    margin-bottom: 60px;
+  }
+  .country-img{
+    height: 200px;
+  }
+  .country-img img{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+  }
+  .country-info{
+    padding-left: 30px;
+    padding-bottom: 0;
+    font-size: 14px;
+    margin-top: 30px;
+    color: var(--primary-color);
+  }
+  .country-info h5{
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-weight: bold; 
+    margin-bottom: 0.5rem; 
+    margin-top: 1rem; 
+    font-size: 1.125rem; 
+  }
+  .no-results{
+    font-weight: 700;
+    font-weight: bold; 
+    font-size: 32px;
+    color:var(--primary-color);
+    display: none;
+  }
+
+.right{
+    margin-top: 78px;
+}
+
+.back{
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+}
+.separately-img{
+    width: 550px;
+    min-height: 400px;
+}
+.separately-img img{
+    height: 300px;
+}
+.separately-info{
+    margin-left: 8rem;
+    margin-top: 1rem;
+}
+.borders{
+    border-color: var(--secondary-color);
+}
+.whole{
+    display: flex;
+}
+
+
+@media(max-width: 375px){
+
+    .search-container .search-icon{
+       margin-top: 8px;
+    }
+
+    .search-container input{
+        width: 345px;
+        margin-top: 20px;
+    }
+    .search_filter{
+       display: block;
+    }
+
+    .dropDown{
+        width: 170px;
+        margin-top: 5px;
+    }
+    .countries {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .country{
+        min-height: 370px;
+        width: 100%; 
+        text-align: center;
+        width: 280px;
+      }
+      .country-info{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      .country h5{
+        margin-top: 0;
+      }
+
+      /* second page */
+      .whole{
+        display: block;
+        margin-left: 10px;
+      }
+      .separately-img{
+        
+        width: 300px;
+        min-height: 250px;
+    }
+    .separately-img img{
+        height: 200px;
+    }
+    .separately-info{
+        margin-left: 0;
+    }
+    .right{
+        margin-top: 40px;
+    }
+    .main{
+        height: auto;
+    }
+}
+
+
+@media (min-width: 1440px) {
+    
+}
+  
